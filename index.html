@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kitchenlinesource — Kitchen Line Consultancy</title>
+<meta name="description" content="Commercial kitchen layout, hood and MEP drawings, equipment planning, financing guidance, tableware and menu consulting for restaurants, cafés and commissary kitchens along the Front Range.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kitchenlinesource — A kitchen line built to survive service">
+<meta property="og:description" content="Line layout, permit drawings, equipment, financing guidance, tableware and menu design — led by working head chefs.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1529940316268-e245e031bcd1?fm=jpg&q=80&w=1200&auto=format&fit=crop">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F6F1E9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --plaster: #F6F1E9;
+    --plaster-dim: #EDE5D6;
+    --ink: #2B2621;
+    --ink-soft: #5B534A;
+    --copper: #A8703C;
+    --copper-deep: #8A5A2C;
+    --sage: #6E7A5C;
+    --line: #D9CDB8;
+    --radius: 2px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--plaster);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  h1,h2,h3{
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    margin: 0;
+    color: var(--ink);
+  }
+  a{ color: inherit; }
+  img,svg{ display:block; max-width:100%; }
+  .wrap{
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* header */
+  header{
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  header .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .brand{
+    font-family:'Fraunces', serif;
+    font-size: 19px;
+    letter-spacing: 0.2px;
+  }
+  nav{ display:flex; gap: 24px; }
+  nav a{
+    text-decoration:none;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color .2s ease, color .2s ease;
+  }
+  nav a:hover{ color: var(--ink); border-color: var(--copper); }
+  .btn{
+    display:inline-block;
+    background: var(--ink);
+    color: var(--plaster);
+    text-decoration:none;
+    padding: 11px 22px;
+    font-size: 14.5px;
+    border-radius: var(--radius);
+    border: 1px solid var(--ink);
+    transition: background .2s ease, color .2s ease;
+  }
+  .btn:hover{ background: transparent; color: var(--ink); }
+  .btn-outline{
+    background: transparent;
+    color: var(--ink);
+  }
+  .btn-outline:hover{ background: var(--ink); color: var(--plaster); }
+
+  /* hero */
+  .hero{
+    padding: 96px 0 80px;
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 56px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.08;
+    max-width: 12ch;
+  }
+  .hero p.lede{
+    margin-top: 22px;
+    max-width: 46ch;
+    color: var(--ink-soft);
+    font-size: 17.5px;
+  }
+  .hero .actions{
+    margin-top: 34px;
+    display:flex;
+    gap: 16px;
+    align-items:center;
+    flex-wrap: wrap;
+  }
+  .hero .note{
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+  .hero-art{ padding: 8px; }
+
+  /* strip */
+  .strip{
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 22px 0;
+  }
+  .strip .wrap{
+    display:flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: var(--ink-soft);
+    font-size: 14px;
+  }
+  .strip.credentials{
+    background: var(--ink);
+    border-top: none;
+    border-bottom: none;
+  }
+  .strip.credentials .wrap{
+    color: var(--plaster);
+    font-family: 'Fraunces', serif;
+    font-size: 15.5px;
+    justify-content: center;
+    gap: 56px;
+  }
+
+  /* gallery */
+  .gallery{ padding: 64px 0; }
+  .gallery-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 24px;
+  }
+  .gallery figure{ margin:0; }
+  .gallery img{
+    width:100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: saturate(1.05) contrast(1.03);
+  }
+  .gallery figcaption{
+    margin-top: 14px;
+    font-size: 13.5px;
+    color: var(--ink-soft);
+  }
+  @media (max-width: 560px){
+    .gallery img{ height: 240px; }
+  }
+
+  /* media */
+  .gallery-head{ display:flex; justify-content:space-between; align-items:end; gap:24px; flex-wrap:wrap; margin-bottom:36px; }
+  .gallery-head h2{ font-size: clamp(28px,3.4vw,38px); max-width: 16ch; }
+  .filters{ display:flex; gap:8px; flex-wrap:wrap; }
+  .filters button{
+    font-family:inherit; font-size:13.5px; color:var(--ink-soft);
+    background:transparent; border:1px solid var(--line); border-radius:var(--radius);
+    padding:8px 16px; cursor:pointer; transition:all .2s ease;
+  }
+  .filters button:hover{ border-color:var(--copper); color:var(--ink); }
+  .filters button[aria-pressed="true"]{ background:var(--ink); border-color:var(--ink); color:var(--plaster); }
+  .gallery figure[hidden]{ display:none; }
+  .thumb{
+    display:block; width:100%; padding:0; border:0; background:none; cursor:zoom-in;
+    border-radius:var(--radius); overflow:hidden; position:relative;
+  }
+  .thumb:focus-visible{ outline:2px solid var(--copper); outline-offset:2px; }
+  .thumb img{ transition: transform .5s ease; }
+  .thumb:hover img{ transform: scale(1.03); }
+  .plate{
+    width:100%; height:280px; background:var(--plaster-dim);
+    border:1px solid var(--line); border-radius:var(--radius);
+  }
+  .plate{ overflow:hidden; border-radius:10px; box-shadow:0 10px 28px rgba(43,38,33,.14); transition:transform .4s ease, box-shadow .4s ease; }
+  .thumb:hover .plate{ transform:translateY(-3px); box-shadow:0 16px 36px rgba(43,38,33,.2); }
+  .plate svg{ width:100%; height:100%; display:block; }
+  @media (max-width:560px){ .plate{ height:240px; } }
+
+  .media{ background: var(--plaster-dim); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .media-grid{ display:grid; grid-template-columns: 1.4fr 1fr; gap:40px; align-items:stretch; }
+  .video-card{ position:relative; aspect-ratio:16/9; background:var(--ink); border-radius:var(--radius); overflow:hidden; }
+  .video-card video, .video-card iframe{ width:100%; height:100%; border:0; object-fit:cover; display:block; }
+  .video-poster{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    width:100%; border:0; padding:0; cursor:pointer; background:var(--ink);
+  }
+  .video-poster img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.55; }
+  .video-poster .play{
+    position:relative; width:72px; height:72px; border-radius:50%;
+    background:var(--plaster); display:flex; align-items:center; justify-content:center;
+    transition: transform .2s ease;
+  }
+  .video-poster:hover .play{ transform:scale(1.07); }
+  .video-poster:focus-visible{ outline:2px solid var(--copper); outline-offset:-4px; }
+  .video-poster .play svg{ width:26px; height:26px; margin-left:4px; }
+  .video-label{
+    position:absolute; left:20px; bottom:16px; color:var(--plaster); font-size:13.5px;
+    font-family:'Fraunces',serif;
+  }
+  .media-side h3{ font-size:24px; margin-bottom:14px; }
+  .media-side p{ color:var(--ink-soft); font-size:15.5px; margin:0 0 22px; }
+  .media-list{ list-style:none; margin:0 0 28px; padding:0; display:grid; gap:0; }
+  .media-list li{ display:flex; justify-content:space-between; gap:16px; padding:13px 0; border-top:1px solid var(--line); font-size:14.5px; }
+  .media-list li:last-child{ border-bottom:1px solid var(--line); }
+  .media-list span{ color:var(--ink-soft); }
+  @media (max-width:860px){ .media-grid{ grid-template-columns:1fr; } }
+
+  /* lightbox */
+  .lightbox{
+    position:fixed; inset:0; z-index:100; background:rgba(43,38,33,.94);
+    display:none; align-items:center; justify-content:center; padding:56px 72px;
+  }
+  .lightbox.open{ display:flex; }
+  .lightbox .stage{ max-width:1100px; width:100%; max-height:100%; display:flex; flex-direction:column; align-items:center; gap:16px; }
+  .lightbox .stage img{ max-height:72vh; width:auto; max-width:100%; border-radius:var(--radius); }
+  .lightbox .stage .svgbox{ width:min(900px,100%); aspect-ratio:10/7; background:var(--plaster-dim); border-radius:var(--radius); }
+  .lightbox .stage .svgbox svg{ width:100%; height:100%; }
+  .lightbox .cap{ color:var(--plaster); font-size:14.5px; text-align:center; }
+  .lightbox button{
+    position:absolute; background:transparent; border:1px solid rgba(246,241,233,.4);
+    color:var(--plaster); width:44px; height:44px; border-radius:50%; cursor:pointer; font-size:20px; line-height:1;
+    transition: background .2s ease;
+  }
+  .lightbox button:hover{ background:rgba(246,241,233,.15); }
+  .lightbox .close{ top:20px; right:20px; }
+  .lightbox .prev{ left:16px; top:50%; transform:translateY(-50%); }
+  .lightbox .next{ right:16px; top:50%; transform:translateY(-50%); }
+  @media (max-width:560px){ .lightbox{ padding:64px 12px; } .lightbox .prev{ left:6px; } .lightbox .next{ right:6px; } }
+
+  .social{ display:flex; gap:20px; }
+  .social a{ text-decoration:none; }
+  .social a:hover{ color:var(--ink); text-decoration:underline; text-decoration-color:var(--copper); }
+
+  /* services */
+  section{ padding: 88px 0; }
+  .section-head{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 56px;
+    align-items:end;
+  }
+  .section-head h2{
+    font-size: clamp(28px, 3.4vw, 38px);
+    max-width: 14ch;
+  }
+  .section-head p{
+    color: var(--ink-soft);
+    max-width: 42ch;
+  }
+
+  .services{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .service{
+    background: var(--plaster);
+    padding: 36px 32px;
+  }
+  .service .mark{
+    width: 34px; height: 34px;
+    margin-bottom: 22px;
+  }
+  .service h3{
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  .service p{
+    color: var(--ink-soft);
+    font-size: 15px;
+  }
+
+  /* offerings */
+  .offerings-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .offering{
+    background: var(--plaster);
+    padding: 44px 40px;
+  }
+  .offering-tag{
+    display:inline-block;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--copper-deep);
+    margin-bottom: 16px;
+  }
+  .offering h3{
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+  .offering-lede{
+    color: var(--ink-soft);
+    font-size: 15.5px;
+    margin-bottom: 26px;
+  }
+  .offering-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+  }
+  .offering-list li{
+    position: relative;
+    padding-left: 22px;
+    font-size: 15px;
+    color: var(--ink);
+  }
+  .offering-list li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 8px;
+    height: 1px;
+    background: var(--copper);
+  }
+  @media (max-width: 860px){
+    .offerings-grid{ grid-template-columns: 1fr; }
+    .offering{ padding: 36px 28px; }
+  }
+
+  /* process */
+  .process-list{
+    display: grid;
+    gap: 0;
+  }
+  .step{
+    display:grid;
+    grid-template-columns: 90px 1fr 1.3fr;
+    gap: 28px;
+    padding: 30px 0;
+    border-top: 1px solid var(--line);
+    align-items: baseline;
+  }
+  .process-list .step:last-child{ border-bottom: 1px solid var(--line); }
+  .step .num{
+    font-family:'Fraunces', serif;
+    font-size: 15px;
+    color: var(--copper-deep);
+  }
+  .step h3{ font-size: 19px; }
+  .step p{ color: var(--ink-soft); font-size: 15px; margin:0; }
+
+  /* about + quote */
+  .about{
+    background: var(--ink);
+    color: var(--plaster);
+  }
+  .about .wrap{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items:center;
+  }
+  .about h2{ color: var(--plaster); font-size: clamp(26px,3vw,34px); max-width: 16ch; }
+  .about p{ color: #D8D2C6; font-size: 16px; max-width: 48ch; margin-top: 18px;}
+  .quote{
+    border-left: 2px solid var(--copper);
+    padding-left: 26px;
+  }
+  .quote p{
+    font-family:'Fraunces', serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.45;
+    color: var(--plaster);
+    max-width: 30ch;
+  }
+  .quote cite{
+    display:block;
+    margin-top: 16px;
+    font-style: normal;
+    font-size: 13.5px;
+    color: #B7AF9F;
+  }
+
+  /* contact */
+  .contact .wrap{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+  .contact h2{ font-size: clamp(28px,3.4vw,38px); max-width: 12ch; }
+  .contact p{ color: var(--ink-soft); margin-top: 18px; max-width: 40ch; }
+  .contact .direct{ line-height:1.8; }
+  .contact .direct a{ color: var(--copper); text-decoration:none; font-weight:500; }
+  .contact .direct a:hover{ text-decoration:underline; }
+  .field{
+    display:flex;
+    flex-direction:column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .field label{ font-size: 13.5px; color: var(--ink-soft); }
+  .field input, .field textarea{
+    font-family: 'Work Sans', sans-serif;
+    font-size: 15px;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    background: var(--plaster-dim);
+    border-radius: var(--radius);
+    color: var(--ink);
+  }
+  .field input:focus, .field textarea:focus{
+    outline: 2px solid var(--copper);
+    outline-offset: 1px;
+  }
+  form .btn{ border: none; cursor: pointer; font-size: 14.5px; }
+
+  footer{
+    border-top: 1px solid var(--line);
+    padding: 32px 0;
+  }
+  footer .wrap{
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+    color: var(--ink-soft);
+    font-size: 13.5px;
+  }
+
+  @media (max-width: 860px){
+    .hero .wrap{ grid-template-columns: 1fr; }
+    .hero-art{ order:-1; max-width: 260px; }
+    .section-head{ grid-template-columns: 1fr; }
+    .services{ grid-template-columns: 1fr; }
+    .step{ grid-template-columns: 50px 1fr; }
+    .step p{ grid-column: 2 / 3; }
+    .about .wrap, .contact .wrap{ grid-template-columns: 1fr; }
+    nav{ display:none; }
+  }
+
+
+  /* equipment categories */
+  .equip{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap:1px; background:var(--line); border:1px solid var(--line);
+  }
+  .equip-card{ background:var(--plaster); padding:34px 32px; }
+  .equip-card h3{ font-size:20px; margin-bottom:8px; }
+  .equip-card p{ color:var(--ink-soft); font-size:14.5px; margin:0 0 18px; }
+  .chips{ list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px; }
+  .chips li{
+    font-size:12.5px; color:var(--ink-soft); border:1px solid var(--line);
+    padding:4px 10px; border-radius:var(--radius); background:var(--plaster-dim);
+  }
+  .alt{ background:var(--plaster-dim); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .alt .equip-card, .alt .offering{ background:var(--plaster-dim); }
+  .alt .chips li{ background:var(--plaster); }
+  .hood-note{ margin-top:28px; font-size:14px; color:var(--ink-soft); max-width:70ch; }
+  .hood-parts{ display:flex; flex-wrap:wrap; gap:10px 28px; margin:34px 0 0; padding:0; list-style:none; font-family:'Fraunces',serif; font-size:16px; }
+  .hood-parts li::before{ content:"→ "; color:var(--copper); }
+  .hood-parts li:first-child::before{ content:""; }
+  .field select{
+    font-family:'Work Sans',sans-serif; font-size:15px; padding:12px 14px;
+    border:1px solid var(--line); background:var(--plaster-dim); border-radius:var(--radius); color:var(--ink);
+  }
+  .field select:focus{ outline:2px solid var(--copper); outline-offset:1px; }
+  .fin-foot{ margin-top:24px; font-size:13.5px; color:var(--ink-soft); }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">Kitchenlinesource</div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#equipment">Equipment</a>
+      <a href="#process">Process</a>
+      <a href="#financing">Financing</a>
+      <a href="#media">Media</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Book a consult</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>A kitchen line built to survive service.</h1>
+      <p class="lede">We plan the layout, hood, equipment and workflow — and draw it all up for permit — before a single contractor is hired. Then we source everything from the line to the tabletop, plates and cutlery included, so the kitchen runs clean at a full house, not just on the walkthrough.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Book a consult</a>
+        <a class="btn btn-outline" href="#process">See how it works</a>
+      </div>
+      <p class="note">Restaurants, cafés &amp; commissary kitchens · Serving the Front Range</p>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+        <rect x="20" y="200" width="280" height="14" fill="var(--line)"/>
+        <rect x="34" y="60" width="70" height="140" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
+        <rect x="34" y="60" width="70" height="46" fill="var(--plaster-dim)" stroke="var(--ink)" stroke-width="1.5"/>
+        <circle cx="69" cy="83" r="12" fill="none" stroke="var(--copper)" stroke-width="2"/>
+        <rect x="118" y="90" width="90" height="110" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
+        <line x1="163" y1="90" x2="163" y2="200" stroke="var(--ink)" stroke-width="1.5"/>
+        <line x1="118" y1="145" x2="208" y2="145" stroke="var(--ink)" stroke-width="1.5"/>
+        <rect x="222" y="70" width="64" height="130" fill="none" stroke="var(--ink)" stroke-width="1.5"/>
+        <rect x="222" y="70" width="64" height="8" fill="var(--sage)"/>
+        <path d="M232 200 q22 -30 44 0" fill="none" stroke="var(--copper)" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <span>Line layout, MEP &amp; permit drawings</span>
+    <span>Menu design &amp; food vendor sourcing</span>
+    <span>~30% lower food cost, on average</span>
+  </div>
+</div>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="gallery-head">
+      <h2>From the line to the tabletop</h2>
+      <div class="filters" role="group" aria-label="Filter gallery">
+        <button type="button" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" data-filter="kitchen" aria-pressed="false">Kitchens</button>
+        <button type="button" data-filter="tableware" aria-pressed="false">Tableware</button>
+        <button type="button" data-filter="plans" aria-pressed="false">Plans</button>
+      </div>
+    </div>
+    <div class="gallery-grid">
+      <figure data-cat="kitchen">
+        <button class="thumb" type="button" aria-label="Enlarge: Commercial restaurant kitchen and bar"><img loading="lazy" src="https://images.unsplash.com/photo-1529940316268-e245e031bcd1?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Commercial restaurant kitchen and bar"></button>
+        <figcaption>Equipment specified to the menu, not the showroom.</figcaption>
+      </figure>
+      <figure data-cat="kitchen">
+        <button class="thumb" type="button" aria-label="Enlarge: Chef working in a commercial kitchen"><img loading="lazy" src="https://images.unsplash.com/photo-1622021142947-da7dedc7c39a?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Chef working in a commercial kitchen"></button>
+        <figcaption>Kitchens planned around the person running the line.</figcaption>
+      </figure>
+      <figure data-cat="kitchen">
+        <button class="thumb" type="button" aria-label="Enlarge: Modern restaurant interior with tiled facade"><img loading="lazy" src="https://images.unsplash.com/photo-1755409022230-7d96727f4b69?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Modern restaurant interior with tiled facade"></button>
+        <figcaption>Front and back of house planned as one system.</figcaption>
+      </figure>
+      <figure data-cat="tableware">
+        <button class="thumb" type="button" aria-label="Enlarge: Assorted modern ceramic plates"><img loading="lazy" src="https://images.unsplash.com/photo-1523289234383-e85c07f374db?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Assorted modern ceramic plates"></button>
+        <figcaption>Plateware chosen to match the plate count you actually run.</figcaption>
+      </figure>
+      <figure data-cat="tableware">
+        <button class="thumb" type="button" aria-label="Enlarge: Modern stainless steel cutlery set"><img loading="lazy" src="https://images.unsplash.com/photo-1607637508318-d22cfb4299d4?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Modern stainless steel cutlery set"></button>
+        <figcaption>Cutlery and smallware sourced alongside the rest of the build.</figcaption>
+      </figure>
+      <figure data-cat="tableware">
+        <button class="thumb" type="button" aria-label="Enlarge: Modern empty wine and bar glasses"><img loading="lazy" src="https://images.unsplash.com/photo-1560145725-8cbf9768b73a?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Modern empty wine and bar glasses"></button>
+        <figcaption>Glassware matched to your bar program, front to back.</figcaption>
+      </figure>
+      <figure data-cat="plans">
+        <button class="thumb plate-btn" type="button" aria-label="Enlarge: Station-by-station line layout, top-down"><div class="plate" role="img" aria-label="Station-by-station line layout, top-down"><svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="280" fill="#EDE5D6"/><rect x="20" y="20" width="360" height="240" rx="4" fill="#F6F1E9" stroke="#2B2621" stroke-width="2"/><line x1="60" y1="20" x2="60" y2="260" stroke="#D9CDB8" stroke-width=".7"/><line x1="100" y1="20" x2="100" y2="260" stroke="#D9CDB8" stroke-width=".7"/><line x1="140" y1="20" x2="140" y2="260" stroke="#D9CDB8" stroke-width=".7"/><line x1="180" y1="20" x2="180" y2="260" stroke="#D9CDB8" stroke-width=".7"/><line x1="220" y1="20" x2="220" y2="260" stroke="#D9CDB8" stroke-width=".7"/><line x1="260" y1="20" x2="260" y2="260" stroke="#D9CDB8" stroke-width=".7"/><line x1="300" y1="20" x2="300" y2="260" stroke="#D9CDB8" stroke-width=".7"/><line x1="340" y1="20" x2="340" y2="260" stroke="#D9CDB8" stroke-width=".7"/><line x1="20" y1="60" x2="380" y2="60" stroke="#D9CDB8" stroke-width=".7"/><line x1="20" y1="100" x2="380" y2="100" stroke="#D9CDB8" stroke-width=".7"/><line x1="20" y1="140" x2="380" y2="140" stroke="#D9CDB8" stroke-width=".7"/><line x1="20" y1="180" x2="380" y2="180" stroke="#D9CDB8" stroke-width=".7"/><line x1="20" y1="220" x2="380" y2="220" stroke="#D9CDB8" stroke-width=".7"/><rect x="36" y="34" width="70" height="34" rx="3" fill="#C9CED2" stroke="#2B2621" stroke-width="1.2"/><text x="71.0" y="54.0" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">FRYERS</text><rect x="112" y="34" width="70" height="34" rx="3" fill="#C9CED2" stroke="#2B2621" stroke-width="1.2"/><text x="147.0" y="54.0" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">GRILL</text><rect x="188" y="34" width="70" height="34" rx="3" fill="#C9CED2" stroke="#2B2621" stroke-width="1.2"/><text x="223.0" y="54.0" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">RANGE</text><rect x="264" y="34" width="56" height="34" rx="3" fill="#C9CED2" stroke="#2B2621" stroke-width="1.2"/><text x="292.0" y="54.0" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">SAUTÉ</text><rect x="32" y="30" width="292" height="42" rx="4" fill="none" stroke="#A8703C" stroke-width="1.6" stroke-dasharray="5 3"/><text x="326" y="26" font-size="7" fill="#8A5A2C" font-family="Work Sans,sans-serif">HOOD</text><rect x="36" y="110" width="84" height="26" rx="3" fill="#DCE6D2" stroke="#2B2621" stroke-width="1.2"/><text x="78.0" y="126.0" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">COLD PREP</text><rect x="132" y="110" width="84" height="26" rx="3" fill="#DCE6D2" stroke="#2B2621" stroke-width="1.2"/><text x="174.0" y="126.0" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">GARDE MANGER</text><rect x="36" y="86" width="284" height="10" rx="2" fill="#A8703C"/><text x="178" y="94" font-size="6.5" fill="#F6F1E9" text-anchor="middle" font-family="Work Sans,sans-serif" font-weight="600">THE PASS</text><rect x="300" y="110" width="64" height="70" rx="3" fill="#E4E7E9" stroke="#2B2621" stroke-width="1.2"/><text x="332.0" y="148.0" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">WALK-IN</text><rect x="36" y="200" width="90" height="42" rx="3" fill="#E4E7E9" stroke="#2B2621" stroke-width="1.2"/><text x="81.0" y="224.0" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">DISH</text><rect x="140" y="200" width="70" height="42" rx="3" fill="#DCE6D2" stroke="#2B2621" stroke-width="1.2"/><text x="175.0" y="224.0" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">PREP</text><path d="M80 160 C120 160 200 160 270 160" stroke="#A8703C" stroke-width="2" fill="none" stroke-dasharray="4 3"/><path d="M262 154 l10 6 l-10 6" stroke="#A8703C" stroke-width="2" fill="none"/><circle cx="70" cy="78" r="5" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><circle cx="150" cy="78" r="5" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><circle cx="225" cy="78" r="5" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><circle cx="290" cy="78" r="5" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/></svg></div></button>
+        <figcaption>Station-by-station layout drawn before a single permit is filed.</figcaption>
+      </figure>
+      <figure data-cat="plans">
+        <button class="thumb plate-btn" type="button" aria-label="Enlarge: Hood, exhaust and make-up air, side view"><div class="plate" role="img" aria-label="Hood, exhaust and make-up air, side view"><svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="280" fill="#EDE5D6"/><rect x="0" y="236" width="400" height="44" fill="#2B2621" opacity=".9"/><rect x="60" y="130" width="220" height="12" fill="#2B2621"/><path d="M80 130 L260 130 L230 80 L110 80 Z" fill="#C9CED2" stroke="#2B2621" stroke-width="2"/><path d="M110 80 L230 80 L240 90 L100 90 Z" fill="#E4E7E9" opacity=".7"/><rect x="156" y="20" width="28" height="60" fill="#9AA2A8" stroke="#2B2621" stroke-width="2"/><rect x="30" y="144" width="260" height="92" fill="#E4E7E9" stroke="#2B2621" stroke-width="2"/><rect x="30" y="144" width="260" height="14" fill="#C9CED2"/><rect x="44" y="166" width="50" height="62" rx="2" fill="#9AA2A8" stroke="#2B2621" stroke-width="1.2"/><circle cx="69" cy="178" r="3" fill="#A8703C"/><rect x="104" y="166" width="50" height="62" rx="2" fill="#9AA2A8" stroke="#2B2621" stroke-width="1.2"/><circle cx="129" cy="178" r="3" fill="#A8703C"/><rect x="164" y="166" width="50" height="62" rx="2" fill="#9AA2A8" stroke="#2B2621" stroke-width="1.2"/><circle cx="189" cy="178" r="3" fill="#A8703C"/><rect x="224" y="166" width="50" height="62" rx="2" fill="#9AA2A8" stroke="#2B2621" stroke-width="1.2"/><circle cx="249" cy="178" r="3" fill="#A8703C"/><path d="M140 140 q-6 -14 0 -24 q6 -10 0 -22" stroke="#A8703C" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".8"/><path d="M170 140 q-6 -14 0 -24 q6 -10 0 -22" stroke="#A8703C" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".8"/><path d="M200 140 q-6 -14 0 -24 q6 -10 0 -22" stroke="#A8703C" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".8"/><path d="M170 14 C170 4 230 4 300 4" stroke="#A8703C" stroke-width="3" fill="none"/><path d="M292 -2 l12 6 l-12 6" stroke="#A8703C" stroke-width="3" fill="none"/><text x="318" y="18" font-size="8" fill="#8A5A2C" font-family="Work Sans,sans-serif" font-weight="600">EXHAUST</text><rect x="318" y="70" width="60" height="40" rx="3" fill="#6E7A5C" stroke="#2B2621" stroke-width="1.5"/><circle cx="348" cy="90" r="13" fill="#F6F1E9" stroke="#2B2621" stroke-width="1.2"/><path d="M348 90 m-9 0 a9 9 0 0 1 9-9 M348 90 m9 0 a9 9 0 0 1-9 9" stroke="#2B2621" stroke-width="2" fill="none"/><path d="M318 100 L270 118 L270 128" stroke="#6E7A5C" stroke-width="3" fill="none"/><text x="348" y="126" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">MAKE-UP AIR</text></svg></div></button>
+        <figcaption>Hoods and make-up air sized to the cook line, not guessed.</figcaption>
+      </figure>
+      <figure data-cat="plans">
+        <button class="thumb plate-btn" type="button" aria-label="Enlarge: Walk-in cooler with labeled shelving"><div class="plate" role="img" aria-label="Walk-in cooler with labeled shelving"><svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="280" fill="#DDE7EC"/><rect x="50" y="30" width="300" height="220" rx="4" fill="#E4E7E9" stroke="#2B2621" stroke-width="2.5"/><rect x="62" y="42" width="276" height="196" fill="#F1F6F8" stroke="#2B2621" stroke-width="1.2"/><rect x="70" y="80" width="260" height="6" fill="#9AA2A8" stroke="#2B2621" stroke-width="1"/><rect x="78" y="56" width="22" height="24" rx="2" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><rect x="109" y="50" width="28" height="30" rx="2" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="140" y="56" width="34" height="24" rx="2" fill="#E4E7E9" stroke="#2B2621" stroke-width="1"/><rect x="171" y="50" width="22" height="30" rx="2" fill="#DCE6D2" stroke="#2B2621" stroke-width="1"/><rect x="202" y="56" width="28" height="24" rx="2" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="233" y="50" width="34" height="30" rx="2" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><rect x="264" y="56" width="22" height="24" rx="2" fill="#E4E7E9" stroke="#2B2621" stroke-width="1"/><rect x="295" y="50" width="28" height="30" rx="2" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="70" y="128" width="260" height="6" fill="#9AA2A8" stroke="#2B2621" stroke-width="1"/><rect x="78" y="98" width="28" height="30" rx="2" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="109" y="104" width="34" height="24" rx="2" fill="#E4E7E9" stroke="#2B2621" stroke-width="1"/><rect x="140" y="98" width="22" height="30" rx="2" fill="#DCE6D2" stroke="#2B2621" stroke-width="1"/><rect x="171" y="104" width="28" height="24" rx="2" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="202" y="98" width="34" height="30" rx="2" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><rect x="233" y="104" width="22" height="24" rx="2" fill="#E4E7E9" stroke="#2B2621" stroke-width="1"/><rect x="264" y="98" width="28" height="30" rx="2" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="295" y="104" width="34" height="24" rx="2" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><rect x="70" y="176" width="260" height="6" fill="#9AA2A8" stroke="#2B2621" stroke-width="1"/><rect x="78" y="152" width="34" height="24" rx="2" fill="#E4E7E9" stroke="#2B2621" stroke-width="1"/><rect x="109" y="146" width="22" height="30" rx="2" fill="#DCE6D2" stroke="#2B2621" stroke-width="1"/><rect x="140" y="152" width="28" height="24" rx="2" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="171" y="146" width="34" height="30" rx="2" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><rect x="202" y="152" width="22" height="24" rx="2" fill="#E4E7E9" stroke="#2B2621" stroke-width="1"/><rect x="233" y="146" width="28" height="30" rx="2" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="264" y="152" width="34" height="24" rx="2" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><rect x="295" y="146" width="22" height="30" rx="2" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="70" y="214" width="260" height="6" fill="#9AA2A8" stroke="#2B2621" stroke-width="1"/><rect x="78" y="190" width="40" height="24" rx="2" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="130" y="190" width="40" height="24" rx="2" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><rect x="182" y="190" width="40" height="24" rx="2" fill="#E4E7E9" stroke="#2B2621" stroke-width="1"/><rect x="234" y="190" width="40" height="24" rx="2" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="286" y="190" width="40" height="24" rx="2" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><rect x="300" y="46" width="34" height="16" rx="3" fill="#2B2621"/><text x="317" y="58" font-size="9" fill="#9fe3ff" text-anchor="middle" font-family="Work Sans,sans-serif" font-weight="600">38°F</text><rect x="150" y="50" width="60" height="10" rx="2" fill="#9AA2A8"/><text x="180" y="45" font-size="7" fill="#2B2621" text-anchor="middle" font-family="Work Sans,sans-serif">FIFO · PAR LEVELS</text></svg></div></button>
+        <figcaption>Cold storage planned around deliveries and par levels.</figcaption>
+      </figure>
+      <figure data-cat="plans">
+        <button class="thumb plate-btn" type="button" aria-label="Enlarge: Pass with ticket rail and plated dishes"><div class="plate" role="img" aria-label="Pass with ticket rail and plated dishes"><svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="280" fill="#EDE5D6"/><rect x="30" y="44" width="340" height="6" fill="#A8703C"/><rect x="30" y="38" width="340" height="3" fill="#8A5A2C"/><rect x="50" y="52" width="26" height="34" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><line x1="55" y1="62" x2="70" y2="62" stroke="#2B2621" stroke-width="1"/><line x1="55" y1="68" x2="66" y2="68" stroke="#2B2621" stroke-width="1"/><line x1="55" y1="74" x2="70" y2="74" stroke="#A8703C" stroke-width="1"/><rect x="84" y="52" width="26" height="42" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><line x1="89" y1="62" x2="104" y2="62" stroke="#2B2621" stroke-width="1"/><line x1="89" y1="68" x2="100" y2="68" stroke="#2B2621" stroke-width="1"/><line x1="89" y1="74" x2="104" y2="74" stroke="#A8703C" stroke-width="1"/><rect x="118" y="52" width="26" height="50" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><line x1="123" y1="62" x2="138" y2="62" stroke="#2B2621" stroke-width="1"/><line x1="123" y1="68" x2="134" y2="68" stroke="#2B2621" stroke-width="1"/><line x1="123" y1="74" x2="138" y2="74" stroke="#A8703C" stroke-width="1"/><rect x="152" y="52" width="26" height="34" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><line x1="157" y1="62" x2="172" y2="62" stroke="#2B2621" stroke-width="1"/><line x1="157" y1="68" x2="168" y2="68" stroke="#2B2621" stroke-width="1"/><line x1="157" y1="74" x2="172" y2="74" stroke="#A8703C" stroke-width="1"/><rect x="186" y="52" width="26" height="42" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><line x1="191" y1="62" x2="206" y2="62" stroke="#2B2621" stroke-width="1"/><line x1="191" y1="68" x2="202" y2="68" stroke="#2B2621" stroke-width="1"/><line x1="191" y1="74" x2="206" y2="74" stroke="#A8703C" stroke-width="1"/><rect x="220" y="52" width="26" height="50" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><line x1="225" y1="62" x2="240" y2="62" stroke="#2B2621" stroke-width="1"/><line x1="225" y1="68" x2="236" y2="68" stroke="#2B2621" stroke-width="1"/><line x1="225" y1="74" x2="240" y2="74" stroke="#A8703C" stroke-width="1"/><rect x="254" y="52" width="26" height="34" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><line x1="259" y1="62" x2="274" y2="62" stroke="#2B2621" stroke-width="1"/><line x1="259" y1="68" x2="270" y2="68" stroke="#2B2621" stroke-width="1"/><line x1="259" y1="74" x2="274" y2="74" stroke="#A8703C" stroke-width="1"/><rect x="288" y="52" width="26" height="42" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><line x1="293" y1="62" x2="308" y2="62" stroke="#2B2621" stroke-width="1"/><line x1="293" y1="68" x2="304" y2="68" stroke="#2B2621" stroke-width="1"/><line x1="293" y1="74" x2="308" y2="74" stroke="#A8703C" stroke-width="1"/><rect x="322" y="52" width="26" height="50" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><line x1="327" y1="62" x2="342" y2="62" stroke="#2B2621" stroke-width="1"/><line x1="327" y1="68" x2="338" y2="68" stroke="#2B2621" stroke-width="1"/><line x1="327" y1="74" x2="342" y2="74" stroke="#A8703C" stroke-width="1"/><rect x="30" y="50" width="340" height="3" fill="#2B2621" opacity=".15"/><rect x="20" y="124" width="360" height="14" fill="#C9CED2" stroke="#2B2621" stroke-width="1.5"/><rect x="20" y="108" width="360" height="5" fill="#A8703C" opacity=".5"/><rect x="26" y="102" width="12" height="22" fill="#FFB347" opacity=".75"/><rect x="362" y="102" width="12" height="22" fill="#FFB347" opacity=".75"/><ellipse cx="70" cy="121" rx="22" ry="6" fill="#F6F1E9" stroke="#2B2621" stroke-width="1.2"/><ellipse cx="70" cy="119" rx="10" ry="3" fill="#6E7A5C"/><circle cx="73" cy="115" r="4" fill="#6E7A5C"/><ellipse cx="150" cy="121" rx="22" ry="6" fill="#F6F1E9" stroke="#2B2621" stroke-width="1.2"/><ellipse cx="150" cy="119" rx="10" ry="3" fill="#A8703C"/><circle cx="153" cy="115" r="4" fill="#A8703C"/><ellipse cx="230" cy="121" rx="22" ry="6" fill="#F6F1E9" stroke="#2B2621" stroke-width="1.2"/><ellipse cx="230" cy="119" rx="10" ry="3" fill="#6E7A5C"/><circle cx="233" cy="115" r="4" fill="#6E7A5C"/><ellipse cx="310" cy="121" rx="22" ry="6" fill="#F6F1E9" stroke="#2B2621" stroke-width="1.2"/><ellipse cx="310" cy="119" rx="10" ry="3" fill="#A8703C"/><circle cx="313" cy="115" r="4" fill="#A8703C"/><rect x="20" y="138" width="360" height="100" fill="#E4E7E9" stroke="#2B2621" stroke-width="1.5"/><rect x="30" y="150" width="78" height="76" rx="2" fill="#C9CED2" stroke="#2B2621" stroke-width="1.2"/><rect x="58" y="158" width="22" height="4" rx="2" fill="#2B2621"/><rect x="118" y="150" width="78" height="76" rx="2" fill="#C9CED2" stroke="#2B2621" stroke-width="1.2"/><rect x="146" y="158" width="22" height="4" rx="2" fill="#2B2621"/><rect x="206" y="150" width="78" height="76" rx="2" fill="#C9CED2" stroke="#2B2621" stroke-width="1.2"/><rect x="234" y="158" width="22" height="4" rx="2" fill="#2B2621"/><rect x="294" y="150" width="78" height="76" rx="2" fill="#C9CED2" stroke="#2B2621" stroke-width="1.2"/><rect x="322" y="158" width="22" height="4" rx="2" fill="#2B2621"/><circle cx="110" cy="190" r="10" fill="#6E7A5C"/><circle cx="110" cy="180" r="5" fill="#2B2621"/><text x="110" y="214" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">EXPO</text><text x="200" y="262" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif">TICKET → COOK → PLATE → EXPO → RUNNER</text></svg></div></button>
+        <figcaption>A pass built so tickets, plates and expo never collide.</figcaption>
+      </figure>
+      <figure data-cat="plans">
+        <button class="thumb plate-btn" type="button" aria-label="Enlarge: Dish station flow"><div class="plate" role="img" aria-label="Dish station flow"><svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="280" fill="#EDE5D6"/><rect x="20" y="140" width="360" height="20" fill="#C9CED2" stroke="#2B2621" stroke-width="1.5"/><rect x="28" y="160" width="344" height="76" fill="#E4E7E9" stroke="#2B2621" stroke-width="1.5"/><rect x="40" y="108" width="90" height="32" rx="3" fill="#9AA2A8" stroke="#2B2621" stroke-width="1.5"/><rect x="150" y="104" width="100" height="36" fill="#C9CED2" stroke="#2B2621" stroke-width="1.5"/><rect x="156" y="110" width="88" height="24" fill="#9fc3d1" opacity=".55"/><path d="M150 104 Q200 40 250 104" fill="none" stroke="#2B2621" stroke-width="2"/><rect x="190" y="58" width="20" height="14" fill="#A8703C"/><text x="200" y="52" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">HIGH-TEMP MACHINE</text><path d="M180 100 q-5 -10 0 -18" stroke="#A8703C" stroke-width="2" fill="none" opacity=".7" stroke-linecap="round"/><path d="M200 100 q-5 -10 0 -18" stroke="#A8703C" stroke-width="2" fill="none" opacity=".7" stroke-linecap="round"/><path d="M220 100 q-5 -10 0 -18" stroke="#A8703C" stroke-width="2" fill="none" opacity=".7" stroke-linecap="round"/><ellipse cx="305" cy="150" rx="26" ry="6" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><ellipse cx="305" cy="145" rx="26" ry="6" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><ellipse cx="305" cy="140" rx="26" ry="6" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><ellipse cx="305" cy="135" rx="26" ry="6" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><ellipse cx="305" cy="130" rx="26" ry="6" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><ellipse cx="305" cy="125" rx="26" ry="6" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><ellipse cx="305" cy="120" rx="26" ry="6" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><ellipse cx="305" cy="115" rx="26" ry="6" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><rect x="270" y="150" width="70" height="4" fill="#9AA2A8"/><rect x="50" y="118" width="10" height="22" rx="2" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><rect x="64" y="114" width="10" height="26" rx="2" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><rect x="78" y="118" width="10" height="22" rx="2" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><rect x="92" y="114" width="10" height="26" rx="2" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><rect x="106" y="118" width="10" height="22" rx="2" fill="#F6F1E9" stroke="#2B2621" stroke-width="1"/><path d="M48 196 H340 M330 190 l10 6 l-10 6" stroke="#A8703C" stroke-width="2.5" fill="none"/><text x="60" y="224" font-size="8" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">SCRAPE → WASH → RINSE → CLEAN</text><text x="305" y="104" font-size="8" text-anchor="middle" fill="#2B2621" font-family="Work Sans,sans-serif" font-weight="600">CLEAN</text></svg></div></button>
+        <figcaption>Dish flow that keeps clean plates moving and breakage down.</figcaption>
+      </figure>
+      <figure data-cat="plans">
+        <button class="thumb plate-btn" type="button" aria-label="Enlarge: Bar back with glassware"><div class="plate" role="img" aria-label="Bar back with glassware"><svg viewBox="0 0 400 280" xmlns="http://www.w3.org/2000/svg"><rect width="400" height="280" fill="#2F2A25"/><rect x="20" y="14" width="360" height="164" rx="3" fill="#3A332D" stroke="#A8703C" stroke-width="1"/><rect x="48" y="28" width="12" height="40" rx="3" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><rect x="51" y="20" width="6" height="10" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><rect x="80" y="28" width="12" height="40" rx="3" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="83" y="20" width="6" height="10" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="112" y="28" width="12" height="40" rx="3" fill="#3B5A4A" stroke="#2B2621" stroke-width="1"/><rect x="115" y="20" width="6" height="10" fill="#3B5A4A" stroke="#2B2621" stroke-width="1"/><rect x="144" y="28" width="12" height="40" rx="3" fill="#8A5A2C" stroke="#2B2621" stroke-width="1"/><rect x="147" y="20" width="6" height="10" fill="#8A5A2C" stroke="#2B2621" stroke-width="1"/><rect x="176" y="28" width="12" height="40" rx="3" fill="#7B4B2A" stroke="#2B2621" stroke-width="1"/><rect x="179" y="20" width="6" height="10" fill="#7B4B2A" stroke="#2B2621" stroke-width="1"/><rect x="208" y="28" width="12" height="40" rx="3" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><rect x="211" y="20" width="6" height="10" fill="#6E7A5C" stroke="#2B2621" stroke-width="1"/><rect x="240" y="28" width="12" height="40" rx="3" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="243" y="20" width="6" height="10" fill="#A8703C" stroke="#2B2621" stroke-width="1"/><rect x="272" y="28" width="12" height="40" rx="3" fill="#3B5A4A" stroke="#2B2621" stroke-width="1"/><rect x="275" y="20" width="6" height="10" fill="#3B5A4A" stroke="#2B2621" stroke-width="1"/><rect x="304" y="28" width="12" height="40" rx="3" fill="#8A5A2C" stroke="#2B2621" stroke-width="1"/><rect x="307" y="20" width="6" height="10" fill="#8A5A2C" stroke="#2B2621" stroke-width="1"/><rect x="336" y="28" width="12" height="40" rx="3" fill="#7B4B2A" stroke="#2B2621" stroke-width="1"/><rect x="339" y="20" width="6" height="10" fill="#7B4B2A" stroke="#2B2621" stroke-width="1"/><rect x="30" y="72" width="340" height="4" fill="#8A5A2C"/><rect x="30" y="92" width="340" height="6" fill="#8A5A2C"/><path d="M43 74 Q52 86 61 74 Z" fill="#E8C9A0" opacity=".6" stroke="#2B2621" stroke-width="1"/><line x1="52" y1="82" x2="52" y2="92" stroke="#2B2621" stroke-width="1.2"/><line x1="46" y1="92" x2="58" y2="92" stroke="#2B2621" stroke-width="1.2"/><rect x="82" y="76" width="14" height="16" rx="1" fill="#6E7A5C" opacity=".6" stroke="#2B2621" stroke-width="1"/><rect x="121" y="68" width="10" height="24" rx="1" fill="#CFE2EA" opacity=".6" stroke="#2B2621" stroke-width="1"/><path d="M154 74 Q163 86 172 74 Z" fill="#E8C9A0" opacity=".6" stroke="#2B2621" stroke-width="1"/><line x1="163" y1="82" x2="163" y2="92" stroke="#2B2621" stroke-width="1.2"/><line x1="157" y1="92" x2="169" y2="92" stroke="#2B2621" stroke-width="1.2"/><rect x="193" y="76" width="14" height="16" rx="1" fill="#6E7A5C" opacity=".6" stroke="#2B2621" stroke-width="1"/><rect x="232" y="68" width="10" height="24" rx="1" fill="#CFE2EA" opacity=".6" stroke="#2B2621" stroke-width="1"/><path d="M265 74 Q274 86 283 74 Z" fill="#E8C9A0" opacity=".6" stroke="#2B2621" stroke-width="1"/><line x1="274" y1="82" x2="274" y2="92" stroke="#2B2621" stroke-width="1.2"/><line x1="268" y1="92" x2="280" y2="92" stroke="#2B2621" stroke-width="1.2"/><rect x="304" y="76" width="14" height="16" rx="1" fill="#6E7A5C" opacity=".6" stroke="#2B2621" stroke-width="1"/><rect x="343" y="68" width="10" height="24" rx="1" fill="#CFE2EA" opacity=".6" stroke="#2B2621" stroke-width="1"/><rect x="30" y="146" width="340" height="6" fill="#8A5A2C"/><rect x="45" y="130" width="14" height="16" rx="1" fill="#6E7A5C" opacity=".6" stroke="#2B2621" stroke-width="1"/><rect x="84" y="122" width="10" height="24" rx="1" fill="#CFE2EA" opacity=".6" stroke="#2B2621" stroke-width="1"/><path d="M117 128 Q126 140 135 128 Z" fill="#E8C9A0" opacity=".6" stroke="#2B2621" stroke-width="1"/><line x1="126" y1="136" x2="126" y2="146" stroke="#2B2621" stroke-width="1.2"/><line x1="120" y1="146" x2="132" y2="146" stroke="#2B2621" stroke-width="1.2"/><rect x="156" y="130" width="14" height="16" rx="1" fill="#6E7A5C" opacity=".6" stroke="#2B2621" stroke-width="1"/><rect x="195" y="122" width="10" height="24" rx="1" fill="#CFE2EA" opacity=".6" stroke="#2B2621" stroke-width="1"/><path d="M228 128 Q237 140 246 128 Z" fill="#E8C9A0" opacity=".6" stroke="#2B2621" stroke-width="1"/><line x1="237" y1="136" x2="237" y2="146" stroke="#2B2621" stroke-width="1.2"/><line x1="231" y1="146" x2="243" y2="146" stroke="#2B2621" stroke-width="1.2"/><rect x="267" y="130" width="14" height="16" rx="1" fill="#6E7A5C" opacity=".6" stroke="#2B2621" stroke-width="1"/><rect x="306" y="122" width="10" height="24" rx="1" fill="#CFE2EA" opacity=".6" stroke="#2B2621" stroke-width="1"/><path d="M339 128 Q348 140 357 128 Z" fill="#E8C9A0" opacity=".6" stroke="#2B2621" stroke-width="1"/><line x1="348" y1="136" x2="348" y2="146" stroke="#2B2621" stroke-width="1.2"/><line x1="342" y1="146" x2="354" y2="146" stroke="#2B2621" stroke-width="1.2"/><rect x="20" y="186" width="360" height="26" rx="2" fill="#A8703C"/><rect x="20" y="212" width="360" height="52" fill="#241F1B"/><circle cx="60" cy="199" r="3" fill="#F6F1E9" opacity=".7"/><circle cx="120" cy="199" r="3" fill="#F6F1E9" opacity=".7"/><circle cx="180" cy="199" r="3" fill="#F6F1E9" opacity=".7"/><circle cx="240" cy="199" r="3" fill="#F6F1E9" opacity=".7"/><circle cx="300" cy="199" r="3" fill="#F6F1E9" opacity=".7"/><circle cx="360" cy="199" r="3" fill="#F6F1E9" opacity=".7"/><text x="200" y="244" font-size="9" fill="#F6F1E9" text-anchor="middle" font-family="Work Sans,sans-serif" letter-spacing="1.5">GLASS COUNTS · CALLED BY COCKTAIL</text></svg></div></button>
+        <figcaption>Bar layout and glass counts matched to your cocktail program.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="media" id="media">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>See a build in motion</h2>
+      <p>A short walkthrough of how we take a kitchen from empty shell to first service.</p>
+    </div>
+    <div class="media-grid">
+      <div class="video-card" id="videoCard">
+        <button class="video-poster" id="videoPoster" type="button" aria-label="Play walkthrough film">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1622021142947-da7dedc7c39a?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="">
+          <span class="play"><svg viewBox="0 0 24 24"><path d="M6 4 L20 12 L6 20 Z" fill="var(--ink)"/></svg></span>
+          <span class="video-label" id="videoLabel">Walkthrough film</span>
+        </button>
+      </div>
+      <div class="media-side">
+        <h3>Press &amp; media kit</h3>
+        <p>Everything you need to feature a project or share our work.</p>
+        <ul class="media-list">
+          <li>Project photography <span>Available on request</span></li>
+          <li>Logo &amp; brand assets <span>PNG · SVG</span></li>
+          <li>Walkthrough film <span>MP4 · 16:9</span></li>
+          <li>Press contact <span>mail.dasariprasad@gmail.com</span></li>
+        </ul>
+        <a class="btn btn-outline" href="#contact">Request the media kit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip credentials">
+  <div class="wrap">
+    <span>Led by working head chefs</span>
+    <span>World-class kitchen experience</span>
+    <span>Fine dining to fast casual — every concept</span>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Six ways we get involved</h2>
+      <p>Bring us in for the full build-out, or just the part where commercial kitchens usually go wrong.</p>
+    </div>
+    <div class="services">
+      <div class="service">
+        <svg class="mark" viewBox="0 0 34 34"><path d="M4 30 L4 6 L30 6" fill="none" stroke="var(--copper)" stroke-width="1.6"/><circle cx="24" cy="24" r="4" fill="none" stroke="var(--ink)" stroke-width="1.6"/></svg>
+        <h3>Line &amp; workflow design</h3>
+        <p>We map ticket flow from prep to pass, then lay out stations so two cooks can hit the same rail at peak without colliding.</p>
+      </div>
+      <div class="service">
+        <svg class="mark" viewBox="0 0 34 34"><rect x="6" y="6" width="22" height="22" fill="none" stroke="var(--copper)" stroke-width="1.6"/><line x1="6" y1="17" x2="28" y2="17" stroke="var(--ink)" stroke-width="1.6"/></svg>
+        <h3>Equipment &amp; compliance</h3>
+        <p>Hoods, refrigeration and cook lines specified to volume and menu, with a full equipment schedule — brands, types and sizes — built to pass health and fire inspection the first time.</p>
+      </div>
+      <div class="service">
+        <svg class="mark" viewBox="0 0 34 34"><path d="M5 5 H29 V29 H5 Z M5 14 H29 M14 14 V29" fill="none" stroke="var(--copper)" stroke-width="1.6"/><circle cx="22" cy="22" r="3" fill="none" stroke="var(--ink)" stroke-width="1.6"/></svg>
+        <h3>Permit &amp; MEP drawings</h3>
+        <p>Floor plan plus the mechanical, plumbing, electrical, gas, fire-suppression and hood drawings your building department wants to see, filed and followed through approval.</p>
+      </div>
+      <div class="service">
+        <svg class="mark" viewBox="0 0 34 34"><circle cx="17" cy="17" r="11" fill="none" stroke="var(--copper)" stroke-width="1.6"/><path d="M17 10 L17 17 L22 20" stroke="var(--ink)" stroke-width="1.6" fill="none"/></svg>
+        <h3>Vendor &amp; budget sourcing</h3>
+        <p>Vetted contractors, equipment dealers and permitting help, lined up against an opening date and a budget you agreed to upfront.</p>
+      </div>
+      <div class="service">
+        <svg class="mark" viewBox="0 0 34 34"><ellipse cx="17" cy="10" rx="7" ry="4" fill="none" stroke="var(--copper)" stroke-width="1.6"/><line x1="17" y1="14" x2="17" y2="26" stroke="var(--ink)" stroke-width="1.6"/><line x1="8" y1="8" x2="8" y2="20" stroke="var(--ink)" stroke-width="1.6"/><line x1="26" y1="8" x2="26" y2="20" stroke="var(--ink)" stroke-width="1.6"/></svg>
+        <h3>Tableware &amp; smallware</h3>
+        <p>Plates, cutlery, glassware and everyday kitchen items sourced to match your covers, your concept and your break-rate.</p>
+      </div>
+      <div class="service">
+        <svg class="mark" viewBox="0 0 34 34"><path d="M9 6 L9 28 M14 6 L14 15 L9 15 M25 6 C21 6 21 14 25 14 L25 28" fill="none" stroke="var(--copper)" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <h3>Menu &amp; vendor design</h3>
+        <p>Menus built around your concept and kitchen, paired with a food vendor list we help you negotiate — clients typically see about a 30% drop in food cost.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="alt" id="equipment">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Every station, drawn and specified</h2>
+      <p>Each piece of equipment gets a place on the plan and a line on the schedule, so what you buy fits the room and the menu.</p>
+    </div>
+    <div class="equip">
+      <div class="equip-card">
+        <h3>Cooking line</h3>
+        <p>Laid out around your menu and peak ticket volume.</p>
+        <ul class="chips"><li>Ranges</li><li>Griddles &amp; grills</li><li>Fryers</li><li>Charbroilers</li><li>Convection ovens</li><li>Pizza &amp; bakery ovens</li><li>Steam &amp; kettles</li><li>Pasta cookers</li></ul>
+      </div>
+      <div class="equip-card">
+        <h3>Refrigeration</h3>
+        <p>Cold storage sized to deliveries and par levels.</p>
+        <ul class="chips"><li>Walk-in coolers &amp; freezers</li><li>Reach-ins</li><li>Prep tables</li><li>Undercounter units</li><li>Chef bases</li><li>Bar refrigeration</li><li>Display cases</li><li>Ice machines</li></ul>
+      </div>
+      <div class="equip-card">
+        <h3>Sinks &amp; dish</h3>
+        <p>Plumbing connections and dish flow drawn together.</p>
+        <ul class="chips"><li>3-compartment sinks</li><li>Hand sinks</li><li>Mop sinks</li><li>Underbar sinks</li><li>Conveyor &amp; rack dishwashers</li><li>Glass washers</li><li>Grease traps</li></ul>
+      </div>
+      <div class="equip-card">
+        <h3>Holding &amp; warming</h3>
+        <p>Keeps the pass moving without sacrificing quality.</p>
+        <ul class="chips"><li>Holding cabinets</li><li>Proofing cabinets</li><li>Steam tables</li><li>Soup wells</li><li>Heat lamps</li><li>Heated displays</li><li>Drawer warmers</li></ul>
+      </div>
+      <div class="equip-card">
+        <h3>Beverage &amp; bar</h3>
+        <p>Equipment and glass counts matched to your program.</p>
+        <ul class="chips"><li>Espresso &amp; coffee</li><li>Soda &amp; beer dispensing</li><li>Juice bar</li><li>Iced tea brewers</li><li>Frozen &amp; slush</li><li>Wine storage</li></ul>
+      </div>
+      <div class="equip-card">
+        <h3>Storage &amp; support</h3>
+        <p>The unglamorous parts that decide whether service flows.</p>
+        <ul class="chips"><li>Shelving</li><li>Dry storage</li><li>Waste handling</li><li>Staff break room</li><li>Receiving</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hoods">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Hoods &amp; ventilation, sized to the line</h2>
+      <p>Ventilation is the piece that most often stalls a permit. We spec it from your actual cooking equipment, not a rule of thumb.</p>
+    </div>
+    <div class="offerings-grid">
+      <div class="offering">
+        <span class="offering-tag">Type I hood</span>
+        <h3>Grease and smoke</h3>
+        <p class="offering-lede">Goes over cooking that throws off grease-laden vapor and heat, and needs fire suppression inside the hood.</p>
+        <ul class="offering-list">
+          <li>Ranges, griddles, fryers, charbroilers, smokers</li>
+          <li>Stainless hood, grease filters and ductwork</li>
+          <li>Roof-mounted upblast exhaust fan</li>
+          <li>Fire suppression and sprinklers per local code</li>
+        </ul>
+      </div>
+      <div class="offering">
+        <span class="offering-tag">Type II hood</span>
+        <h3>Heat and steam</h3>
+        <p class="offering-lede">Goes over equipment that gives off heat, moisture or combustion by-products, but not grease or smoke.</p>
+        <ul class="offering-list">
+          <li>Dishwashing machines</li>
+          <li>Steamers, kettles and pasta cookers</li>
+          <li>Condensate removal where required</li>
+          <li>Requirements vary by jurisdiction — we confirm locally</li>
+        </ul>
+      </div>
+    </div>
+    <ul class="hood-parts" aria-label="Exhaust system components">
+      <li>Hood</li><li>Grease filters</li><li>Ductwork</li><li>Upblast fan</li><li>Make-up air</li><li>Heater</li>
+    </ul>
+    <p class="hood-note">Some equipment, such as pizza and bakery ovens, may be treated differently by your local fire and building officials, so the final call always follows your jurisdiction&rsquo;s code.</p>
+  </div>
+</section>
+
+<section id="offerings">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What we help with</h2>
+      <p>Two ways clients work with us, depending on whether you're fixing what exists or building something new.</p>
+    </div>
+    <div class="offerings-grid">
+      <div class="offering">
+        <span class="offering-tag">For existing restaurants</span>
+        <h3>Turnaround. Optimization. Growth.</h3>
+        <p class="offering-lede">Struggling with operations, labor costs, or profitability? We bring clarity and control to restaurants that need to reset or scale.</p>
+        <ul class="offering-list">
+          <li>Streamlining labor &amp; food costs</li>
+          <li>Menu engineering &amp; pricing</li>
+          <li>Leadership &amp; management training</li>
+          <li>Guest experience improvement</li>
+          <li>Operational systems that scale</li>
+          <li>Multi-location growth strategies</li>
+        </ul>
+      </div>
+      <div class="offering">
+        <span class="offering-tag">For new restaurant concepts</span>
+        <h3>Start Smart. Launch Strong.</h3>
+        <p class="offering-lede">Opening a new restaurant? Avoid costly mistakes with expert guidance from day one.</p>
+        <ul class="offering-list">
+          <li>Validate your concept &amp; market</li>
+          <li>Build a bulletproof business plan</li>
+          <li>Develop your brand, menu &amp; design</li>
+          <li>Hire and train the right team</li>
+          <li>Design efficient kitchen &amp; bar layouts</li>
+          <li>Set up systems for lasting success</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How a project runs</h2>
+      <p>Four stages, start to finish. You'll know what's happening at each one before it starts.</p>
+    </div>
+    <div class="process-list">
+      <div class="step">
+        <div class="num">01</div>
+        <h3>Walkthrough</h3>
+        <p>We visit the space, walk the menu with your chef, and note where the current line breaks down at volume.</p>
+      </div>
+      <div class="step">
+        <div class="num">02</div>
+        <h3>Plan</h3>
+        <p>A station layout, equipment schedule, hood and MEP drawings, and a rough budget come back to you, sized to your menu and expected covers.</p>
+      </div>
+      <div class="step">
+        <div class="num">03</div>
+        <h3>Source</h3>
+        <p>We connect you with vetted contractors and equipment dealers, walk through financing options, and handle the health, fire and building permit filings.</p>
+      </div>
+      <div class="step">
+        <div class="num">04</div>
+        <h3>Build &amp; check-in</h3>
+        <p>We're on-site through the build-out to catch problems early, then run a mock service before opening night.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="alt" id="deliverables">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What you walk away with</h2>
+      <p>Documents you can hand to a contractor, a dealer, a lender or a plan reviewer — all consistent with each other.</p>
+    </div>
+    <ul class="media-list">
+      <li>Station-by-station floor plan <span>Top-down, to scale</span></li>
+      <li>Equipment schedule <span>Brands, types &amp; sizes</span></li>
+      <li>Equipment elevations &amp; 3D views <span>See it before you build it</span></li>
+      <li>MEP drawings <span>Mechanical · electrical · plumbing · gas</span></li>
+      <li>Hood &amp; fire-suppression drawings <span>For permit submission</span></li>
+      <li>Cost estimate <span>Equipment &amp; build-out</span></li>
+      <li>Live design review sessions <span>Revise with us in real time</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="financing">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Spread the cost of the build</h2>
+      <p>Equipment is the biggest line item on most openings. We help you line up financing options alongside the plan, so the budget and the drawings agree.</p>
+    </div>
+    <div class="offerings-grid">
+      <div class="offering">
+        <span class="offering-tag">Why finance equipment</span>
+        <h3>Keep cash for opening day</h3>
+        <ul class="offering-list">
+          <li>Protects cash reserves for payroll, inventory and marketing</li>
+          <li>Smooths cash flow with predictable payments</li>
+          <li>Preserves existing credit lines</li>
+          <li>May offer tax advantages — ask your accountant</li>
+          <li>Often simpler to arrange than a traditional bank loan</li>
+        </ul>
+      </div>
+      <div class="offering">
+        <span class="offering-tag">Who it&rsquo;s for</span>
+        <h3>New concepts and established operators</h3>
+        <ul class="offering-list">
+          <li>Startups opening a first location</li>
+          <li>Established restaurants renovating or expanding</li>
+          <li>Small and mid-sized food businesses</li>
+          <li>Owners with a range of credit profiles</li>
+        </ul>
+        <p class="fin-foot">Approval and terms depend on the lender and your business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <h2>Started by someone who's actually run a kitchen line.</h2>
+      <p>Kitchenlinesource was built out of frustration with kitchens designed by people who'd never worked a service. Every project is led by working head chefs with world-class kitchen experience — we've planned lines for fine dining, fast casual, cafés and everything between, so we plan for the ticket rail, not the render.</p>
+    </div>
+    <div class="quote">
+      <p>They walked the menu with our chef before drawing a single line. We passed health inspection on the first visit and never once backed up on a Friday.</p>
+      <cite>— Owner, a café in Parker, CO</cite>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Start with a walkthrough</h2>
+      <p>Tell us about the concept and space. We'll get back to you within two business days to schedule a site visit.</p>
+      <p class="direct">Prefer to reach us directly?<br>
+        Call <a href="tel:+17209252232">720-925-2232</a><br>
+        Email <a href="mailto:mail.dasariprasad@gmail.com">mail.dasariprasad@gmail.com</a></p>
+    </div>
+    <form onsubmit="event.preventDefault();">
+      <div class="field">
+        <label for="name">Name</label>
+        <input id="name" type="text" placeholder="Your name" required>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="you@business.com" required>
+      </div>
+      <div class="field">
+        <label for="need">What do you need?</label>
+        <select id="need">
+          <option>Full kitchen design &amp; build-out</option>
+          <option>Layout &amp; permit drawings</option>
+          <option>Hood &amp; ventilation</option>
+          <option>Equipment selection &amp; financing</option>
+          <option>Tableware, menu &amp; vendors</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="message">About the project</label>
+        <textarea id="message" rows="4" placeholder="Concept, expected covers, square footage, target opening date"></textarea>
+      </div>
+      <button class="btn" type="submit">Request a walkthrough</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Kitchenlinesource</span>
+    <span class="social">
+      <a href="https://www.instagram.com/" rel="noopener" target="_blank">Instagram</a>
+      <a href="https://www.linkedin.com/" rel="noopener" target="_blank">LinkedIn</a>
+      <a href="https://www.youtube.com/" rel="noopener" target="_blank">YouTube</a>
+    </span>
+    <span><a href="tel:+17209252232">720-925-2232</a> · <a href="mailto:mail.dasariprasad@gmail.com">mail.dasariprasad@gmail.com</a></span>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="close" type="button" aria-label="Close">&times;</button>
+  <button class="prev" type="button" aria-label="Previous">&#8249;</button>
+  <div class="stage" id="lbStage"></div>
+  <button class="next" type="button" aria-label="Next">&#8250;</button>
+</div>
+
+<script>
+/* ===== MEDIA SETUP =====
+   Add your walkthrough film here. Use ONE of:
+   videoSrc  – path/URL to an MP4 (e.g. "media/walkthrough.mp4")
+   youtubeId – YouTube video id (e.g. "dQw4w9WgXcQ")
+   Leave both empty to show a "coming soon" state. */
+const MEDIA = { videoSrc: "", youtubeId: "", posterLabel: "Walkthrough film" };
+
+(function(){
+  /* video */
+  const card = document.getElementById('videoCard');
+  const poster = document.getElementById('videoPoster');
+  const label = document.getElementById('videoLabel');
+  if(!MEDIA.videoSrc && !MEDIA.youtubeId){ label.textContent = 'Walkthrough film — coming soon'; poster.style.cursor='default'; }
+  poster.addEventListener('click', function(){
+    if(MEDIA.videoSrc){
+      card.innerHTML = '<video controls autoplay playsinline src="'+MEDIA.videoSrc+'"></video>';
+    } else if(MEDIA.youtubeId){
+      card.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/'+MEDIA.youtubeId+'?autoplay=1&rel=0" title="Walkthrough film" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    }
+  });
+
+  /* filters */
+  const figs = Array.from(document.querySelectorAll('.gallery figure'));
+  document.querySelectorAll('.filters button').forEach(function(b){
+    b.addEventListener('click', function(){
+      document.querySelectorAll('.filters button').forEach(function(x){ x.setAttribute('aria-pressed', x===b); });
+      const f = b.dataset.filter;
+      figs.forEach(function(fig){ fig.hidden = !(f==='all' || fig.dataset.cat===f); });
+    });
+  });
+
+  /* lightbox */
+  const lb = document.getElementById('lightbox');
+  const stage = document.getElementById('lbStage');
+  let idx = 0, lastFocus = null;
+  const visible = function(){ return figs.filter(function(f){ return !f.hidden; }); };
+  function show(i){
+    const list = visible();
+    idx = (i + list.length) % list.length;
+    const fig = list[idx];
+    const img = fig.querySelector('img');
+    const plate = fig.querySelector('.plate');
+    const cap = fig.querySelector('figcaption').textContent;
+    stage.innerHTML = '';
+    if(img){
+      const im = document.createElement('img');
+      im.src = img.src.replace('w=1200','w=1800'); im.alt = img.alt;
+      stage.appendChild(im);
+    } else {
+      const box = document.createElement('div');
+      box.className = 'svgbox'; box.innerHTML = plate.innerHTML;
+      stage.appendChild(box);
+    }
+    const c = document.createElement('div'); c.className='cap'; c.textContent = cap;
+    stage.appendChild(c);
+  }
+  function open(fig){
+    lastFocus = document.activeElement;
+    show(visible().indexOf(fig));
+    lb.classList.add('open'); document.body.style.overflow='hidden';
+    lb.querySelector('.close').focus();
+  }
+  function close(){
+    lb.classList.remove('open'); document.body.style.overflow='';
+    if(lastFocus) lastFocus.focus();
+  }
+  figs.forEach(function(fig){ fig.querySelector('.thumb').addEventListener('click', function(){ open(fig); }); });
+  lb.querySelector('.close').addEventListener('click', close);
+  lb.querySelector('.prev').addEventListener('click', function(){ show(idx-1); });
+  lb.querySelector('.next').addEventListener('click', function(){ show(idx+1); });
+  lb.addEventListener('click', function(e){ if(e.target===lb) close(); });
+  document.addEventListener('keydown', function(e){
+    if(!lb.classList.contains('open')) return;
+    if(e.key==='Escape') close();
+    if(e.key==='ArrowLeft') show(idx-1);
+    if(e.key==='ArrowRight') show(idx+1);
+  });
+})();
+</script>
+
+</body>
+</html>
